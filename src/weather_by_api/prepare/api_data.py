@@ -1,4 +1,3 @@
-from django.shortcuts import render
 import requests
 import json
 
@@ -16,17 +15,9 @@ def get_weather_data(city):
     results['temp'] = data.get('main').get('temp')
     results['feels_like'] = data.get('main').get('feels_like')
 
-    return results
+    context = {'results': results}
 
+    return context
 
-# Create your views here.
-def home_view(request):
-    if request.method == 'POST' and 'city' in request.POST:
-        city = request.POST.get('city')
-        results = get_weather_data(city)
-        context = {'results': results}
-    else:
-        context = {}
-
-    return render(request, 'weather/home.html', context)
+# print(get_weather_data('london'))
 
