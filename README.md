@@ -8,4 +8,12 @@
 ### _What have I done it here?_  Here is the list step by step :  
 ---
 - ✅ __Preparation of HTML Template__
-- ✅
+- ✅ __Get Weather Data Using API__  
+- ✅ __Prepare Views.py__
+- ✅ __Update Templates__  
+
+## _Toolkit_ :
+- _install django_
+- _Requests Library_
+- _Open weather API KEY_
+- _import json_
